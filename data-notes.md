@@ -1,4 +1,4 @@
-# Data Notes
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/79ecdc09-47b5-4af5-b546-1b7d0416061e" /># Data Notes
 
 ## OSM Sport Facilities, Eti-Osa, Lagos
 
@@ -94,3 +94,93 @@
 - The community or ward boundary layer for Eti-Osa is required to compare accessibility between communities.
 - The road network can support accessibility analysis, but missing road attributes may limit detailed road classification or routing.
 - The project remains feasible because the available datasets provide mapped facilities, roads, and an LGA boundary. However, the completeness of the OSM data and the availability of community or ward boundaries will affect the accuracy and level of detail of the final accessibility assessment.
+
+
+# Data Preparation and Quality Notes
+
+## Study area
+
+- Study area: Eti-Osa Local Government Area, Lagos State, Nigeria
+- Study area source: GRID3 administrative boundary data
+- Study area area check: 177.9 km², matching the published value used for the check
+- Original source layers were provided in EPSG:4326.
+
+## CRS and preparation
+
+- Original CRS: EPSG:4326 (WGS 84)
+- Working CRS: EPSG:32631 (WGS 84 / UTM Zone 31N)
+- EPSG:32631 was chosen because the study area is in western Nigeria and the projected CRS uses metres, making it suitable for distance and area calculations.
+- Roads, sports pitches and sports centres were clipped to the Eti-Osa study area.
+- The study area and other required layers were reprojected to EPSG:32631.
+- The original files in `data/raw/` were not modified.
+- The analysis-ready files were saved in `data/processed/`.
+
+# Data Quality Notes
+
+## Study area — GRID3 Eti-Osa boundary
+- Source: GRID3 administrative boundary data
+- CRS: EPSG:4326; reprojected to EPSG:32631 (WGS 84 / UTM Zone 31N) for analysis.
+- COMPLETENESS: Eti-Osa LGA boundary was present and used as the study area. No obvious gaps or duplicate study-area features were observed.
+- CURRENCY: Boundary was checked against available reference information. No obvious changes affecting the study area were identified.
+- POSITIONAL: Boundary was visually checked against satellite imagery; no major positional offset was observed.
+- ATTRIBUTE: LGA name and identifying attributes were checked; the study area was correctly identified as Eti Osa.
+- FITNESS: Suitable for defining the study area and clipping the other datasets.
+
+## OSM roads, Eti-Osa
+- Source: OpenStreetMap via QuickOSM, `highway=*`
+- COMPLETENESS: Roads were checked against satellite imagery in the study area. Most visible roads in the areas checked were represented in the dataset.
+- CURRENCY: OpenStreetMap data is continuously updated, so a single dataset year was not assigned. The extracted data represents the OSM data available when it was downloaded.
+- POSITIONAL: Roads were visually compared with satellite imagery and generally aligned with visible road locations.
+- ATTRIBUTE: Road attributes were inspected for missing and varied values. No major attribute issue affecting the intended analysis was identified.
+- FITNESS: Suitable for general road network and accessibility analysis within Eti-Osa, but may not represent every road or indicate current road condition.
+
+## OSM sports pitches, Eti-Osa
+- Source: OpenStreetMap via QuickOSM, sports pitches
+- COMPLETENESS: Sports pitches were checked against satellite imagery. Most visible sports facilities in the areas checked were represented, although facilities may be missing where they are not mapped in OSM or are difficult to identify from imagery.
+- CURRENCY: No single year was assigned because the data was extracted from OpenStreetMap, which is continuously updated. The dataset represents the OSM data available when it was downloaded.
+- POSITIONAL: Sports pitches were visually checked against satellite imagery and generally corresponded with the visible facilities.
+- ATTRIBUTE: Fields such as sport, access, building and name were inspected. Some attributes contain NULL values, which were retained where no reliable information was available.
+- FITNESS: Suitable for analysing the distribution and location of mapped sports pitches in Eti-Osa. It should not be assumed to represent every existing sports pitch.
+
+## OSM sports centres, Eti-Osa
+- Source: OpenStreetMap via QuickOSM, sports centres
+- COMPLETENESS: Sports centres were checked against satellite imagery in the study area. No major missing groups were identified during the areas checked.
+- CURRENCY: No single year was assigned because the data was extracted from continuously updated OpenStreetMap. The dataset represents the OSM data available when it was downloaded.
+- POSITIONAL: Features were visually checked against satellite imagery and generally aligned with the mapped locations.
+- ATTRIBUTE: Available attributes were inspected for missing or inconsistent values. No major issue affecting the intended analysis was identified.
+- FITNESS: Suitable for analysing the location and distribution of mapped sports centres within the study area.
+
+## OSM parks, Eti-Osa
+- Source: OpenStreetMap via QuickOSM, `leisure=park`
+- COMPLETENESS: Parks were checked against satellite imagery in the study area. Most visible parks in the areas checked were represented, although some may be missing where they are not mapped in OSM or are difficult to identify from imagery.
+- CURRENCY: No single year was assigned because the data was extracted from OpenStreetMap, which is continuously updated. The dataset represents the OSM data available when it was downloaded.
+- POSITIONAL: Parks were visually compared with satellite imagery and generally corresponded with the visible park locations.
+- ATTRIBUTE: Available attributes such as name and other descriptive fields were inspected. Some attributes contain NULL values, which were retained where no reliable information was available.
+- FITNESS: Suitable for analysing the distribution and location of mapped parks in Eti-Osa. It should not be assumed to represent every existing park.
+
+## OSM stadiums, Eti-Osa
+- Source: OpenStreetMap via QuickOSM,`leisure=stadium`
+- COMPLETENESS: Stadiums were checked against satellite imagery in the study area. The mapped stadiums in the areas checked were represented, although unmapped facilities may not be included.
+- CURRENCY: No single year was assigned because the data was extracted from OpenStreetMap, which is continuously updated. The dataset represents the OSM data available when it was downloaded.
+- POSITIONAL: Stadiums were visually compared with satellite imagery and generally corresponded with their visible locations.
+- ATTRIBUTE: Available attributes such as name, sport and other descriptive fields were inspected. Some attributes contain NULL values, which were retained where no reliable information was available.
+- FITNESS: Suitable for analysing the location and distribution of mapped stadiums within Eti-Osa. It should not be assumed to represent every existing stadium.
+
+## Preparation
+- All required layers were clipped to the Eti-Osa study area.
+- Layers were reprojected from EPSG:4326 to EPSG:32631 (WGS 84 / UTM Zone 31N).
+- Study area check: 177.9 km², matching the published reference value used for the check.
+- Original source data in `data/raw/` was not modified.
+- Analysis-ready GeoPackages are stored in `data/processed/`.
+
+## Problems found and actions taken
+
+- Source layers were in EPSG:4326, so they were reprojected to EPSG:32631 for analysis.
+- Roads and sports facility layers were clipped to the Eti-Osa study area.
+- The original raw datasets were preserved.
+- Area calculations were checked after reprojection using square metres and square kilometres.
+- The calculated Eti-Osa study area was 177.9 km² and was checked against the published reference value.
+- No major data quality problems requiring removal of features were identified. Uncertain or missing attribute information was flagged rather than guessed.
+
+
+
