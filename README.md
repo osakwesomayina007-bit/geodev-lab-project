@@ -6,7 +6,7 @@ Built as part of GeoDev Lab Africa, Cohort One.
 See project-brief.md. for the full details.
 
   Week 1- Project Brief
- ./project-brief.md
+ [./project-brief.md]
 
   Week 2 - Data Notes
   ./data-notes.md
