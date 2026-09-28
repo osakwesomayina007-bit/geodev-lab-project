@@ -9,10 +9,9 @@ See project-brief.md. for the full details.
 (https://github.com/osakwesomayina007-bit/geodev-lab-project/blob/main/project-brief.md)
 
   Week 2 - Data Notes
-  ./data-notes.md
-
+(https://github.com/osakwesomayina007-bit/geodev-lab-project/blob/main/data-notes.md)
   Week 3 - Data Quality Check
-  ./data-notes.md
+(https://github.com/osakwesomayina007-bit/geodev-lab-project/blob/main/data-notes.md)
 
   Week 4 - Month Summary & Map
   ./month-1-summary.md
