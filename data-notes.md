@@ -1,5 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/79ecdc09-47b5-4af5-b546-1b7d0416061e" /># Data Notes
-
 ## OSM Sport Facilities, Eti-Osa, Lagos
 
 - Source: OpenStreetMap, via QuickOSM
