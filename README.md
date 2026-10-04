@@ -17,3 +17,7 @@ See project-brief.md. for the full details.
   Week 4 - Month Summary & Map
   (https://github.com/osakwesomayina007-bit/geodev-lab-project/blob/main/month-1-summary.md)
   https://github.com/osakwesomayina007-bit/geodev-lab-project/blob/6727955247cc761d4eabd9c1f2c7be2cd5027a69/Eti-Osa%20Recreational%20Accessibility%20Map.png
+
+  ## Month 2: Development Environment and Early Python
+
+Week 5: Set up Python, VS Code and the terminal. hello.py runs.
