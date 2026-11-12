@@ -27,3 +27,9 @@ Week 6: set up the project with uv and added pandas. check.py prints the pandas 
 Week 7: analyse.py reads wards.csv, converts each area and classifies each ward.
 
 Week 8: inspect_data.py summarises lga and area in my area data.
+
+Week 9: Created summary.py to consolidate and refactor the data analysis code from previous weeks. Implemented three functions to organise the analysis and make the code reusable.
+
+## Month 2 Reflection
+This month, I became more comfortable with breaking code into functions and understanding how to make my scripts more organised and reusable. The idea of using functions to avoid repeating code finally clicked for me, although I am still working on understanding how to structure larger programs and decide when to separate tasks into different functions. My capstone helped me see how the data I worked with in Month 1 could be used for more meaningful analysis rather than just being stored or displayed. Overall, this month helped me understand the importance of writing cleaner code and building on previously collected data.
+
